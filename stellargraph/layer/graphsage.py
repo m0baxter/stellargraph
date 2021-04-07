@@ -51,7 +51,12 @@ from ..connector.neo4j.mapper import (
     Neo4jGraphSAGENodeGenerator,
     Neo4jDirectedGraphSAGENodeGenerator,
 )
-
+from ..connector.janusgraph.mapper import (
+    JanusGraphGraphSAGENodeGenerator,
+    JanusGraphDirectedGraphSAGENodeGenerator,
+    JanusGraphGraphSAGELinkGenerator,
+    JanusGraphDirectedGraphSAGELinkGenerator,
+)
 
 class GraphSAGEAggregator(Layer):
     """
@@ -910,6 +915,8 @@ class GraphSAGE:
                 GraphSAGENodeGenerator,
                 GraphSAGELinkGenerator,
                 Neo4jGraphSAGENodeGenerator,
+                JanusGraphGraphSAGENodeGenerator,
+                JanusGraphGraphSAGELinkGenerator,
             ),
         ):
             errmsg = "Generator should be an instance of GraphSAGENodeGenerator or GraphSAGELinkGenerator"

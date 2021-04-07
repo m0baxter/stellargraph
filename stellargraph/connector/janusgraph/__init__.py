@@ -15,10 +15,9 @@
 # limitations under the License.
 
 """
-    The connector package contains classes and functions to support sampling for remote databases.
+    The JanusGraph connector package contains classes and functions to support sampling from JanusGraph databases.
 """
 
-__all__ = [
-    "neo4j",
-    "janusgraph",
-]
+from .sampler import *
+from .mapper import *
+from .graph import *
